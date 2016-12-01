@@ -3,3 +3,8 @@ __author__ = 'FireJohnny'
 
 from numpy import *
 from matplotlib import *
+
+def loadFile():
+    dataMat = []
+    LabelMat = []
+    
