@@ -16,15 +16,10 @@ def loadFile(fileName):
 
     return dataArr,LabelArr
 
-dataArr,LabelArr = loadFile("testSet.txt")
-print dataArr,"\n",LabelArr
 
-
-
-
-def poltBestFit(weights):
+def poltBestFit():
     import matplotlib.pyplot as plt
-    dataMat ,labelMat = loadFile()
+    dataMat ,labelMat = loadFile("testSet.txt")
     dataArr = np.array(dataMat)
     n = np.shape(dataArr)[0]
     xcord1 = []
@@ -40,8 +35,13 @@ def poltBestFit(weights):
     ax = fig.add_subplot(111)
     ax.scatter(xcord1,ycord1,s=30,c='red',marker ='s')
     ax.scatter(xcord2,ycord2,s=30,c='green')
-    x = np.arange(-3.0,3.0,0.1)
-    y = (-weights[0] -weights[1]*x)/weights[2]
-    ax.plot(x,y)
+    #x = np.arange(-3.0,3.0,0.1)
+    #y = (-weights[0] -weights[1]*x)/weights[2]
+    #ax.plot(x,y)
     plt.xlabel('X1');plt.ylabel('Y2')
     plt.show()
+
+
+if __name__ == "__main__":
+
+    pol = poltBestFit()
