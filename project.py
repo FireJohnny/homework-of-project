@@ -16,6 +16,13 @@ def loadFile(fileName):
 
     return dataArr,LabelArr
 
+def sigmod(X):
+	return 1/(1+exp(-X))
+	
+def Newtun_algro(dataArr,LabelArr):
+	dataMat = mat(dataArr)
+	LabelMat = mat(LabelArr).transponse()
+
 
 def poltBestFit():
     import matplotlib.pyplot as plt
